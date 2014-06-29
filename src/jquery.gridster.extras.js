@@ -6,7 +6,7 @@
         root.Gridster = factory(root.$ || root.jQuery, root.Gridster);
     }
 
-}(this, function($, Gridster) {
+}(typeof window !== "undefined" ? window : this, function($, Gridster) {
 
     var fn = Gridster.prototype;
 

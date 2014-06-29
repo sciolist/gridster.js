@@ -15,7 +15,7 @@
             root.GridsterCollision);
     }
 
- }(this, function($, Draggable, Collision) {
+ }(typeof window !== "undefined" ? window : this, function($, Draggable, Collision) {
 
     var defaults = {
         namespace: '',

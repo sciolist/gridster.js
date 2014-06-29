@@ -15,7 +15,7 @@
             root.GridsterCoords);
     }
 
-}(this, function($, Coords) {
+}(typeof window !== "undefined" ? window : this, function($, Coords) {
 
     var defaults = {
         colliders_context: document.body,

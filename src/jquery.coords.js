@@ -14,7 +14,7 @@
        root.GridsterCoords = factory(root.$ || root.jQuery);
     }
 
-}(this, function($) {
+}(typeof window !== "undefined" ? window : this, function($) {
     /**
     * Creates objects with coordinates (x1, y1, x2, y2, cx, cy, width, height)
     * to simulate DOM elements on the screen.

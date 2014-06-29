@@ -14,7 +14,7 @@
         root.GridsterDraggable = factory(root.$ || root.jQuery);
     }
 
-}(this, function($) {
+}(typeof window !== "undefined" ? window : this, function($) {
 
     var defaults = {
         items: 'li',
