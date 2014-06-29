@@ -1370,13 +1370,15 @@
             }
         }
 
-        var css_props = {};
-        !this.resize_dir.bottom && (css_props.width = Math.max(Math.min(
-            this.resize_initial_width + rel_x, max_width), min_width));
-        !this.resize_dir.right && (css_props.height = Math.max(Math.min(
-            this.resize_initial_height + rel_y, max_height), min_height));
+        if (this.options.resize.snap !== true) {
+			var css_props = {};
+			!this.resize_dir.bottom && (css_props.width = Math.max(Math.min(
+				this.resize_initial_width + rel_x, max_width), min_width));
+			!this.resize_dir.right && (css_props.height = Math.max(Math.min(
+				this.resize_initial_height + rel_y, max_height), min_height));
 
-        this.$resized_widget.css(css_props);
+			this.$resized_widget.css(css_props);
+        }
 
         if (size_x !== this.resize_last_sizex ||
             size_y !== this.resize_last_sizey) {
